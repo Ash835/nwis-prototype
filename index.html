@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oil Is Well · NWIS</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
+</head><body>
+<div id="intro"><h1>Oil Is Well</h1><div class="s">NWIS — Nearby Wells Intelligence System</div>
+<p><b style="color:var(--tx)">From Historical Data to Drilling Foresight.</b><br>Transforming scattered drilling history into contextual, explainable intelligence for the well being drilled today.</p>
+<p style="font-size:13px;margin-top:18px">Demonstration with synthetic data. Not connected to Oil India Limited systems.</p><button class="go" onclick="document.getElementById('intro').style.opacity=0;setTimeout(()=>intro.remove(),600)">Enter command center</button></div>
+<header><div class="b"><h2>Oil Is Well</h2><small>NWIS · Nearby Wells Intelligence System</small></div>
+<div class="hv">Well<b>OIL-X17</b></div><div class="hv">Depth<b id="hd">2,785 m</b></div><div class="hv">Formation<b>XYZ Sandstone</b></div>
+<div class="live"><i></i>SIMULATED FEED · no live OIL connection<br><span id="upd" style="color:var(--mu)"></span></div></header>
+<div class="ban">SYNTHETIC DEMO DATA. All wells, events, documents and telemetry are invented. This prototype is not connected to eRTMAC or any Oil India Limited system.</div>
+<div id="rail"></div>
+<div style="padding:8px 18px"><input id="gs" placeholder="Ask about wells, formations, events or historical experiences..." onkeydown="if(event.key=='Enter')nl(this.value)"><div id="sr"></div></div>
+<div class="app"><nav id="nav"></nav><main>
+
+<section class="pg on" id="p0"><div class="g k" id="kpi"></div>
+<div class="note">Synthetic prototype data. Values shown are not real Oil India Limited data. eRTMAC feed is simulated.</div>
+<div class="c" style="margin-bottom:14px"><h3>Engineer workflow</h3><div class="chain" id="chain"></div></div>
+<div class="g t2"><div class="c"><h3>Current well telemetry <small style="color:var(--am)">eRTMAC SIMULATION</small></h3><div class="sp" id="sp"></div></div>
+<div class="c"><h3>Alert center</h3><div id="alerts"></div></div></div></section>
+
+<section class="pg" id="p1"><div class="c"><h3>Nearby wells map</h3>
+<div id="rad"></div><div class="g t2"><svg id="map" viewBox="0 0 600 460" style="width:100%;background:#0b1017;border-radius:3px"></svg><div id="wd" class="c" style="background:var(--sf2)">Select a well on the map.</div></div></div></section>
+
+<section class="pg" id="p2"><div class="g t2"><div class="c"><h3>Historical analogues for OIL-X17</h3><p class="kv">Similarity weighs proximity, formation, depth, trajectory, mud weight, drilling parameters and event patterns. Select a row to compare.</p><table id="an"></table></div>
+<div class="c"><h3>Side-by-side comparison</h3><div id="cmp"></div></div></div></section>
+
+<section class="pg" id="p3"><div class="c"><h3 style="font-size:26px">What Happened Next?</h3>
+<p class="kv" style="max-width:640px">NWIS looks past single events and matches event sequences in comparable wells against the current well's behaviour.</p>
+<div id="seqs"></div>
+<div class="c" style="background:var(--sf2);border-color:var(--am)"><div class="tag M" style="display:inline-block">HISTORICAL PATTERN DETECTED</div>
+<div class="big">Current drilling behaviour resembles historical sequences that preceded stuck pipe.</div>
+<div>3 of 5 comparable historical wells experienced a significant drilling event within the next 20–40 m.</div>
+<div class="note">Simulated data. Pattern similarity only, requires engineer review.</div></div></div></section>
+
+<section class="pg" id="p4"><div class="c"><h3>Historical replay</h3><div id="rw"></div>
+<button class="btn on" onclick="play()">Replay</button><button class="btn" onclick="pause()">Pause</button>
+<div class="tl" id="tl"></div></div></section>
+
+<section class="pg" id="p5"><div class="g t2"><div class="c"><h3>Why this alert?</h3><span class="tag H">STUCK PIPE RISK · HIGH · potential</span>
+<ul id="why" style="line-height:1.9;padding-left:18px"></ul>
+<div style="margin-top:10px"><button class="btn" onclick="go(3)">Compare wells</button><button class="btn" onclick="go(2)">View analogues</button></div>
+<h3 style="margin-top:16px">Historical responses observed in comparable wells</h3>
+<div id="rtab"></div>
+<div class="note">Historical outcome comparison, synthetic prototype data. Not a recommendation. Engineer makes the final decision.</div></div>
+<div class="c"><h3>Evidence</h3><div id="ev"></div></div></div></section>
+
+<section class="pg" id="p6"><div class="c"><h3>NWIS Intelligence Assistant</h3><p class="kv">Answers draw only from the synthetic knowledge base.</p>
+<div id="qs"></div><input id="qi" placeholder="Ask about wells, formations, events or historical experiences..." onkeydown="if(event.key=='Enter')ask(this.value)">
+<div id="ans"></div></div></section>
+<section class="pg" id="p7"><div class="c"><div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center"><h3 style="font-size:22px">Don't just predict the risk. Show the history behind it.</h3><button class="btn on" onclick="tour()">Play story</button></div><div id="sg"></div></div></section>
+<section class="pg" id="p8"><div class="c" id="fib"></div></section>
+<section class="pg" id="p9"><div class="c"><h3>Document review</h3><p class="kv">Simulated OCR and NLP pipeline on a synthetic WCR page. Review the extraction, then add it to the knowledge graph.</p><div id="dvw"></div></div></section>
+</main></div>
+
+<script type="module" src="/src/main.js"></script>
+</body></html>
